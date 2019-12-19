@@ -1,0 +1,2 @@
+Welcome to Feed the Zombies! Feed The Zombies (FTZ) is a content creation tool (brain food for the masses). FTZ will pull news articles from the internet, and then generate text from the chosen article.
+This is a project written by Bianca Wilkinson for the Coder Academy's Code IRL Bootcamp.

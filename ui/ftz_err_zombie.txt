@@ -1,0 +1,7 @@
+Your terminal window is
+not wide enough to show
+the full introduction,
+please increase the width
+of your terminal if you
+would like to see the
+full introduction.
