@@ -1,12 +1,3 @@
-
-# Project documentation
-
-Please see the [documentation](documentation/) folder for all relevant documents, including:
-- [Software Development Plan](documentation/SoftwareDevelopmentPlan.md)
-- [Development Log](documentation/DevelopmentLog.md)
-- [Feed The Zombies Flow Chart](documentation/FeedTheZombies_Workflows.pdf)
-- [Assessment Details](documentation/AssessmentDetails.md)
-
 # How to install Feed The Zombies
 
 Clone the directory, and then open a terminal there on your computer.
@@ -14,7 +5,30 @@ Clone the directory, and then open a terminal there on your computer.
 ```bash
 ./build.sh
 ```
+
 Type the above into your terminal and hit enter to install.
+
+> ## Possible install errors
+>
+> When re-installing this project, I ran into this error:
+>
+> ```bash
+> Building native extensions. This could take a while...
+> ERROR:  Error installing rest-client:
+> ERROR: Failed to build gem native extension.
+>
+>    current directory: /var/lib/gems/2.5.0/gems/unf_ext-0.0.7.6/ext/unf_ext/usr/bin/ruby2.5 -r ./siteconf20191220-12110-1w674vc.rb extconf.rb
+> mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+>
+> extconf failed, exit code 1
+>
+> Gem files will remain installed in /var/lib/gems/2.5.0/gems/unf_ext-0.0.7.6 for inspection.
+> Results logged to /var/lib/gems/2.5.0/extensions/x86_64-linux/2.5.0/unf_ext-0.0.7.6/gem_make.out
+> ```
+>
+> After a Google search, I found this [StackExchange question](https://stackoverflow.com/questions/22544754/failed-to-build-gem-native-extension-installing-compass), suggesting ruby-dev could solve this. I installed it, and it fixed it.
+>
+> If you run into issues, please let me know so I can fix/document them.
 
 # How to run Feed the Zombies
 
@@ -36,8 +50,6 @@ curl \
     -H 'api-key:cf052c5c-725a-42e9-9a1d-4ac75af91c50' \
     https://api.deepai.org/api/text-generator
 ```
-
-
 
       -Φ╦,
         ╩╬╙N╥
