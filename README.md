@@ -1,4 +1,6 @@
-# How to install Feed The Zombies
+# FEED THE ZOMBIES
+
+## How to install Feed The Zombies
 
 Clone the directory, and then open a terminal there on your computer.
 
@@ -8,7 +10,7 @@ Clone the directory, and then open a terminal there on your computer.
 
 Type the above into your terminal and hit enter to install.
 
-> ## Possible install errors
+> ### Possible install errors
 >
 > When re-installing this project, I ran into this error:
 >
@@ -30,7 +32,7 @@ Type the above into your terminal and hit enter to install.
 >
 > If you run into issues, please let me know so I can fix/document them.
 
-# How to run Feed the Zombies
+## How to run Feed the Zombies
 
 In the same terminal above, type:
 
@@ -40,7 +42,7 @@ ruby ./dist/FTZ.rb
 
 It pretty much guides you through all the steps from there. Enjoy!
 
-## Just in case...
+### Just in case...
 
 To test that the connection to the AI text generator is live, users can copy paste the below script into their terminal:
 
