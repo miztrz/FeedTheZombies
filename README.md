@@ -1,5 +1,7 @@
 # FEED THE ZOMBIES
 
+[![BCH compliance](https://bettercodehub.com/edge/badge/miztrz/FeedTheZombies?branch=master)](https://bettercodehub.com/)
+
 ## How to install Feed The Zombies
 
 Clone the directory, and then open a terminal there on your computer.
