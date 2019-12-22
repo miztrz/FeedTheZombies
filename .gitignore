@@ -1,0 +1,7 @@
+## User Specific Environment Files ##
+.history
+.env
+## Dev Environment Specific Files ##
+.yardoc
+doc
+documentation
