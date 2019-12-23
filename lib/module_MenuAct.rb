@@ -1,29 +1,54 @@
 module MenuAct
   module_function
-  def dir_history
-    @dir_history = {}
-    Dir.children('.history').each do |f|
-      @dir_history.store(File.ctime(".history/#{f}"), f.to_s)
+  def env_set
+    unless File.exist?('.env') && Dir.exist?('.history')
+      @new_env = true
+    else
+      @dir_history = {}
+      Dir.children('.history').each do |f|
+        @dir_history.store(File.ctime(".history/#{f}"), f.to_s)
+      end
     end
   end
-  def new_user
-    unless Dir.exist?('.history') # rubocop:todo Style/GuardClause
-      Dir.mkdir('.history')
-      @new_user = true
-    end
-  end
+
   def greet
-    new_user
-    dir_history
-    if @new_user
+    env_set
+    if @new_env
       puts "Welcome to Feed The Zombies - where you can generate content from the news! This is a tool for play, not for pay, so please be respectful of that.
       The first step is to search for some news. I (your terminal interface insider) will guide you through each step, no muss no fuss.
-      So what are you waiting for?!? You can along below:"
+      So what are you waiting for?!?"
+      puts "For Feed The Zombies to work, you will need 2 API keys."
+      puts "The first is available from newsapi.org (signup at newsapi.org/register)."
+      puts "I'll wait here whilst you get that!"
+      # wait 10
+      puts "Got it? Please enter your news api key below:"
+      newsapikey = gets.chomp
+      puts "The next is available through deepai.org (we are mostly interested in the text generator, but they have some really cool other things too)."
+      puts "Best get cracking on that deepai.org api key!"
+      # wait 10
+      puts "Got it? Please enter your deep ai api key below:"
+      deepaiapikey = gets.chomp
+      puts "Wooh! Will just run some diagnostics to confirm this is all working as expected."
+      ProgFlow.linebreak
+      puts ' '
+      SpinMe.auto_spin
+      File.open('.env', 'w') { |f| f.write 
+      "NEWSAPI_KEY=#{newsapikey}
+      DEEPAI_KEY=#{deepaiapikey}"}
+      Dir.mkdir('.history')
+      # wait 15
+      SpinMe.stop
+      ProgFlow.linebreak 
+      puts "Rad! You are ready to go. Good luck!"
+      puts ''
+      ProgFlow.linebreak
+      puts ''
+      # wait 2
       $stage = news_choice
-    elsif @dir_history.empty?
-    puts "It looks like you've been around here before, but you haven't saved any history.
-First step generally speaking though is to search for some news. So lets go!"
-      $stage = news_choice
+#     elsif @dir_history.empty?
+#     puts "It looks like you've been around here before, but you haven't saved any history.
+# First step generally speaking though is to search for some news. So lets go!"
+#       $stage = news_choice
     else
       puts "I can see you have #{@dir_history.length} file(s) that have been generated previously."
       $stage = feature_choice

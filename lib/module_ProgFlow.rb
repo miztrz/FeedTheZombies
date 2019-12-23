@@ -34,6 +34,9 @@ module ProgFlow
       'lolcat -a -s 180 ui/ftz_zombie.txt'
     end
   end
+  
+
+
   def prompt
     @prompt = TTY::Prompt.new(help_color: :yellow)
   end

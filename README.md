@@ -73,3 +73,7 @@ mizcodes
 ╬H ,╓@╜ ▐Ñ
 `Φ╗╖@M╜╙╟N ╟H ▐╫ ╔Ñ ,╬H ,╬╨ ╓Φ▌,,╓╥#╩`
 ``
+
+<!--
+NEWSAPI_KEY=f37a599d478547949f0205df90df8c49
+DEEPAI_KEY=cf052c5c-725a-42e9-9a1d-4ac75af91c50 -->
