@@ -32,10 +32,13 @@ module MenuAct
       ProgFlow.linebreak
       puts ' '
       SpinMe.auto_spin
-      File.open('.env', 'w') { |f| f.write 
-      "NEWSAPI_KEY=#{newsapikey}
-      DEEPAI_KEY=#{deepaiapikey}"}
-      Dir.mkdir('.history')
+      File.open('.env', 'w') do |f| 
+        f.puts "NEWSAPI_KEY=#{newsapikey}"
+        f << "DEEPAI_KEY=#{deepaiapikey}"
+      end
+      unless Dir.exist?('.history') 
+        Dir.mkdir('.history')
+      end
       # wait 15
       SpinMe.stop
       ProgFlow.linebreak 
