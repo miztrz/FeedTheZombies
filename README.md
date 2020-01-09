@@ -39,7 +39,7 @@ ERROR: Failed to build gem native extension.
  Results logged to /var/lib/gems/2.5.0/extensions/x86_64-linux/2.5.0/unf_ext-0.0.7.6/gem_make.out
 ```
 
-After a Google search, I found multiple articles advising that installing ruby-dev-all could solve this. I installed it, and it fixed it.
+After a Google search, I found multiple articles advising that installing ruby-dev could solve this. I installed it, and it fixed it. To do that, run `apt-get install ruby-dev` (might need sudo depending on your permissions).
 
 If you run into issues, please let me know so I can fix/document them.
 
